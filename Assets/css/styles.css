@@ -89,7 +89,7 @@
   font-size: 100px;
   margin-top: 0%;
   margin-left: 30px;
-  width: 100%;
+  width: 100vw;
   animation: zoomInOut 5s ease-in-out infinite;
 }
 @keyframes zoomInOut{
