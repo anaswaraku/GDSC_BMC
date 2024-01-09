@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,400&family=Raleway:ital,wght@1,300&family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;1,400&family=Raleway:ital,wght@1,300&family=Space+Grotesk:wght@500&display=swap');
 
 
 .navbar {
@@ -88,6 +89,7 @@
   font-size: 100px;
   margin-top: 0%;
   margin-left: 30px;
+  width: 100%;
   animation: zoomInOut 5s ease-in-out infinite;
 }
 @keyframes zoomInOut{
@@ -161,8 +163,13 @@ div.scroll-container img {
   justify-content: center;
   row-gap: 10px;
   column-gap: 10px;
+  background-color: #333;
 }
-
+#mainhead{
+  text-align: center;
+  color: #34a853;
+  font-family: 'Open Sans', sans-serif;
+}
 .recentevent {
   width: 300px;
   height: 425px;
@@ -201,50 +208,3 @@ div.scroll-container img {
   margin: 50px 0;
 }
 
-/*----------------------------------GPT---------------------------------------------*/
-
-
-.event-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  max-width: 700px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.event-container img {
-  max-width: 300px;
-  border-radius: 8px;
-  margin-right: 20px;
-}
-
-.event-details {
-  text-align: left;
-}
-
-.event-details h2 {
-  font-size: 24px;
-  margin-top: 10px;
-  color: #333;
-
-}
-
-.event-details p {
-  font-size: 16px;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-.event-details p:first-child {
-  margin-top: 5px;
-}
-
-.event-details p:last-child {
-  margin-bottom: 0;
-}
-
-/*-------------------------------------------------------------------------------*/
