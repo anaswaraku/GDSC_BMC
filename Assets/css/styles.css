@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,400&family=Raleway:ital,wght@1,300&family=Space+Grotesk:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;1,400&family=Raleway:ital,wght@1,300&family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');/*quote 1 font-family: 'Roboto Condensed', sans-serif;*/
 
 :root {
   /*========== Colors ==========*/
@@ -368,4 +369,28 @@ div.scroll-container img {
 .map{
   height: 300px;
   width: 100%;
+}
+
+.quotes{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 100px;
+    column-gap: 100px;
+ 
+}
+.quote{/*card*/
+  width: 200px;
+  height: 200px;
+  background-color:rgba(213, 207, 117, 0.2);
+  background-blend-mode: overlay ;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  column-gap: 100px;
+
 }
