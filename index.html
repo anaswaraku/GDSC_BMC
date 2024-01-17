@@ -1,16 +1,181 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <link rel="icon" href="Assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Assets/css/styles.css" />
     <script src="/Assets/js/index.js"></script>
     <title>GDSC BMC</title>
-  </head>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            transition: top 0.3s; /* Add smooth transition for better UX */
+        }
+
+        .navbar-logo img {
+            height: 50px;
+        }
+
+        .navbar-links {
+            float: right;
+            padding: 20px;
+        }
+
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+            display: inline-block;
+        }
+
+        /* Hide the navbar on scroll down */
+        .navbar-hidden {
+            top: -70px; /* Adjust based on your navbar height */
+        }
+
+        /* Main section styles */
+        .text-container {
+            padding: 80px;
+            text-align: center;
+        }
+
+        #head {
+            font-size: 36px;
+            color: rgb(66, 133, 244);
+            margin-bottom: 10px;
+        }
+
+        #about {
+            font-size: 16px;
+            color: #333;
+            white-space: pre-wrap;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: rgb(66, 133, 244);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Recent events styles */
+        .recentevents {
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+
+        .card_container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card_article {
+            width: 30%;
+            margin: 20px 0;
+        }
+
+        .card_img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card_data {
+            padding: 15px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .card_title {
+            color: rgb(66, 133, 244);
+        }
+
+        .card_button {
+            background-color: rgb(66, 133, 244);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Highlights styles */
+        .highlights {
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Scroll container styles */
+        .scroll-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .scroll-container img {
+            width: 300px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        /* Map styles */
+        .map {
+            padding: 50px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .text-container {
+                padding: 20px;
+            }
+
+            #head {
+                font-size: 24px;
+            }
+
+            #about {
+                font-size: 14px;
+            }
+
+            .recentevents {
+                padding: 30px;
+            }
+
+            .card_article {
+                width: 100%;
+            }
+
+            .scroll-container img {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
 
   <body>
     <nav class="navbar">
@@ -116,7 +281,23 @@
  <div class="map">
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7857.793293305105!2d76.3299823!3d10.0253871!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c434d5b48f9%3A0xe577acf938f6350e!2sBharata%20Mata%20College!5e0!3m2!1sen!2sin!4v1705043068101!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
  </div>
- 
+ <script>
+  let prevScrollPos = window.pageYOffset;
+
+  window.onscroll = function () {
+      const currentScrollPos = window.pageYOffset;
+
+      if (prevScrollPos < currentScrollPos) {
+          // Scrolling down, hide the navbar
+          document.querySelector(".navbar").classList.add("navbar-hidden");
+      } else {
+          // Scrolling up, show the navbar
+          document.querySelector(".navbar").classList.remove("navbar-hidden");
+      }
+
+      prevScrollPos = currentScrollPos;
+  };
+</script>
  
 </body>
 
