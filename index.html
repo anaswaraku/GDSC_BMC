@@ -141,20 +141,34 @@
  <script>
   document.addEventListener('DOMContentLoaded', function () {
     const scrollContainer = document.getElementById('scrollContainer');
+    let startTouchX = 0;
 
-    // Function to handle the vertical scroll
-    function handleVerticalScroll(event) {
-      // Adjust the horizontal scroll position based on the vertical scroll
-      scrollContainer.scrollLeft += event.deltaY;
+    // Function to handle touch start
+    function handleTouchStart(event) {
+      startTouchX = event.touches[0].clientX;
+    }
 
-      // Prevent the default vertical scrolling behavior
+    // Function to handle touch move
+    function handleTouchMove(event) {
+      const touchX = event.touches[0].clientX;
+      const delta = startTouchX - touchX;
+
+      // Adjust the horizontal scroll position based on touch movement
+      scrollContainer.scrollLeft += delta;
+
+      // Update startTouchX for the next touch move event
+      startTouchX = touchX;
+
+      // Prevent the default touchmove behavior on the container
       event.preventDefault();
     }
 
-    // Add the 'wheel' event listener to the scroll container
-    scrollContainer.addEventListener('wheel', handleVerticalScroll);
+    // Add touch event listeners to the scroll container
+    scrollContainer.addEventListener('touchstart', handleTouchStart);
+    scrollContainer.addEventListener('touchmove', handleTouchMove);
   });
 </script>
+
 </body>
 
 </html>
