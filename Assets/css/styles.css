@@ -86,19 +86,17 @@
     font-size: small;
   }
 }
-/*---------------------------------------------------------*/
+
 .text-container {
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   align-items: center;
   margin-top: 10px;
-  padding: 10px;
-  background-image: url(/Assets/img/decor);
-  background-size: contain   ;
+  padding: 10px; 
+  background-image: url(/Assets/Gif.gif);
+  background-size: cover   ;
   background-repeat: no-repeat;
- 
-  
 }
 
 #head
@@ -108,26 +106,29 @@
   margin-top: 0%;
   margin-left: 30px;
   width: 100vw;
-  animation: zoomInOut 5s ease-in-out infinite;
+  animation: zoomInOut 8s ease-in-out infinite;
+  
+ 
 }
 @keyframes zoomInOut{
   0%,100%{
     transform: scale(1);
   }
   50%{
-    transform: scale(1.04);
+    transform: scale(1.01);
   }
 }
 
 #about
 {
   font-family: 'Raleway', sans-serif;
-  margin-top: 10px;
+  
   text-align: center;
   font-size: 25px;
   width: 60%;
   color: #555;
   letter-spacing: 2px;
+  
 }
 
 
@@ -148,13 +149,11 @@
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-/*---------------------------------------------------------*/
-
 @media screen and (max-width: 768px) {
   div.text-container p {
     font-size: medium;
   }
-}
+}                       
 
 .highlights h1 {
   font-family: "Sofia";
@@ -164,15 +163,23 @@
 }
 
 div.scroll-container {
-  background-color: none;
-  overflow: auto;
-  white-space: nowrap;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+  white-space: nowrap; /* Prevent wrapping of child elements */
   padding: 10px;
+  height: 400px; /* Set the desired height */
+  background-color: none; /* Add your preferred background color */
+  display: flex; /* Use flexbox for horizontal arrangement */
 }
 
 div.scroll-container img {
-  padding: 10px;
-  width: auto;
+  width: 600px; /* Adjust the width of each image as needed */
+  height: 400px; /* Adjust the height of each image as needed */
+  margin-right: 10px;
+}
+
+.upcomingevent{
+  
 }
 
 /*---------------------*/
@@ -204,7 +211,7 @@ div.scroll-container img {
   place-items: center;
   margin-inline: 1.5rem;
   padding-block: 5rem;
-  background-color: #34a853;
+  /*background-color: #34a853;*/
   
 }
 
@@ -356,4 +363,9 @@ div.scroll-container img {
     width: 316px;
     padding-inline: 2.5rem;
   }
+}
+
+.map{
+  height: 300px;
+  width: 100%;
 }
