@@ -102,7 +102,7 @@
     <h1>Highlights of GDSC BMC</h1>
   </div>
 
-  <div class="scroll-container">
+  <div id="scrollContainer" class="scroll-container">
     <img src="Assets/img/posters/novaposter.png" alt="Nova" width="600" height="400">
     <img src="Assets/img/posters/git.jpg" alt="Gaming Event" width="600" height="400">
     <img src="Assets/img/posters/Gamingevent.jpg" alt="Gaming Event" width="600" height="400">
@@ -117,7 +117,23 @@
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7857.793293305105!2d76.3299823!3d10.0253871!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c434d5b48f9%3A0xe577acf938f6350e!2sBharata%20Mata%20College!5e0!3m2!1sen!2sin!4v1705043068101!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
  </div>
  
- 
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const scrollContainer = document.getElementById('scrollContainer');
+
+    // Function to handle the vertical scroll
+    function handleVerticalScroll(event) {
+      // Adjust the horizontal scroll position based on the vertical scroll
+      scrollContainer.scrollLeft += event.deltaY;
+
+      // Prevent the default vertical scrolling behavior
+      event.preventDefault();
+    }
+
+    // Add the 'wheel' event listener to the scroll container
+    scrollContainer.addEventListener('wheel', handleVerticalScroll);
+  });
+</script>
 </body>
 
 </html>
