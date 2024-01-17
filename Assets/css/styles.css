@@ -357,9 +357,7 @@ div.scroll-container img {
     justify-content: center;
     row-gap: 100px;
     column-gap: 100px;
-    
-   
- 
+   margin: 100px;
 }
 .quote{/*card*/
   width: auto;
@@ -370,13 +368,12 @@ div.scroll-container img {
   transition: transform 0.3s ease-in-out;
   border-radius: 10px;
   overflow: hidden;
-  margin: 20px;
+  margin: 50px;
   padding: 20px;
   flex-wrap: wrap;
   column-gap: 100px;
   animation: show forwards;
   animation-timeline: view();
-  overflow: initial;
   
 }
 
