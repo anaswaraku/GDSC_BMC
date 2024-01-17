@@ -217,8 +217,11 @@ div.scroll-container img {
 }
 
 .card_container {
-  display: grid;
-  row-gap: 3.5rem;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 100px;
+    column-gap: 100px;
 }
 
 .card_article {
@@ -327,32 +330,7 @@ div.scroll-container img {
   }
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-@media screen and (max-width: 340px) {
-  .recentevents {
-    margin-inline: 1rem;
-  }
 
-  .card_data {
-    width: 250px;
-    padding: 1rem;
-  }
-}
-
-/* For medium devices */
-@media screen and (min-width: 768px) {
-  .card_container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
-  }
-}
-
-/* For large devices */
-@media screen and (min-width: 1120px) {
-  .recentevents {
-    height: 100vh;
-  }
 
   .card_container {
     grid-template-columns: repeat(3, 1fr);
