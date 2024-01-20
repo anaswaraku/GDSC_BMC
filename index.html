@@ -9,6 +9,7 @@
     <link rel="icon" href="Assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Assets/css/styles.css" />
     <script src="/Assets/js/index.js"></script>
+    <script src="/Assets/js/events.js"></script>
     <title>GDSC BMC</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;800&display=swap');
@@ -46,14 +47,15 @@
          </strong>
         </p>
 
-        <pre id="about">
+       <!---
+      <pre id="about">
          <b> GDSC BMC is a platform for budding and aspiring developers
           aiming to bridge the gap between theory and practice.
           Our goal is to help them broaden their understanding of
           emerging technologies and shape their skills into a better
           version. The club intends to provide students with hands-on
           technology through Google's curated resources.
-        </b></pre>
+        </b></pre>--> 
    
         <button onclick="join()">JOIN US</button>
 
@@ -83,41 +85,68 @@
         </div>
       
 
-    
-    <div class="recentevents" >
-      <h1 id="mainhead">Recent Events</h1>
-      <div class="card_container">
-         <article class="card_article">
-            <img src="Assets/img/Events/digitalmarketing.jpg" alt="image" class="card_img">
-   
-            <div class="card_data">
-               <span class="card_description"></span>
-               <h2 class="card_title">Digital Marketing Workshop</h2>
-               <a href="#" class="card_button">Read More</a>
-            </div>
-         </article>
-   
-         <article class="card_article">
-            <img src="Assets/img/Events/cloud.jpg" alt="image" class="card_img">
-   
-            <div class="card_data">
-               <span class="card_description"></span>
-               <h2 class="card_title">Google CLoud Study Jam</h2>
-               <a href="#" class="card_button">Read More</a>
-            </div>
-         </article>
-   
-         <article class="card_article">
-            <img src="Assets/img/Events/flutter.jpg" alt="image" class="card_img">
-   
-            <div class="card_data">
-               <span class="card_description"></span>
-               <h2 class="card_title">Flutter Workshop</h2>
-               <a href="#" class="card_button">Read More</a>
-            </div>
-         </article>
+
+        
+<div class="wrapper">
+  
+  <div class="container">
+    <input type="radio" name="slide" id="c1" checked>
+    <label for="c1" class="card">
+      <div class="row">
+        <div class="icon">1</div>
+          <div class="description">
+            
+          </div>
+        
       </div>
-   </div>
+    </label>
+  </div>
+  
+   
+  <div class="container">
+    <input type="radio" name="slide" id="c2" >
+    <label for="c2" class="card">
+      <div class="row">
+        <div class="icon">2</div>
+          <div class="description">
+            
+          </div>
+        
+      </div>
+    </label>
+  </div>
+  
+   
+  <div class="container">
+    <input type="radio" name="slide" id="c3" >
+    <label for="c3" class="card">
+      <div class="row">
+        <div class="icon">3</div>
+          <div class="description">
+          
+          </div>
+        
+      </div>
+    </label>
+  </div>
+  
+  
+  <div class="container">
+    <input type="radio" name="slide" id="c4" >
+    <label for="c4" class="card">
+      <div class="row">
+        <div class="icon">4</div>
+          <div class="description">
+            <button onclick="Event4()">About the Event</button>
+          </div>
+        
+      </div>
+    </label>
+  </div>
+  
+  
+  </div>
+
 
   <div class="highlights">
     <h1>Highlights of GDSC BMC</h1>
@@ -138,37 +167,6 @@
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7857.793293305105!2d76.3299823!3d10.0253871!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c434d5b48f9%3A0xe577acf938f6350e!2sBharata%20Mata%20College!5e0!3m2!1sen!2sin!4v1705043068101!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
  </div>
  
- <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const scrollContainer = document.getElementById('scrollContainer');
-    let startTouchX = 0;
-
-    // Function to handle touch start
-    function handleTouchStart(event) {
-      startTouchX = event.touches[0].clientX;
-    }
-
-    // Function to handle touch move
-    function handleTouchMove(event) {
-      const touchX = event.touches[0].clientX;
-      const delta = startTouchX - touchX;
-
-      // Adjust the horizontal scroll position based on touch movement
-      scrollContainer.scrollLeft += delta;
-
-      // Update startTouchX for the next touch move event
-      startTouchX = touchX;
-
-      // Prevent the default touchmove behavior on the container
-      event.preventDefault();
-    }
-
-    // Add touch event listeners to the scroll container
-    scrollContainer.addEventListener('touchstart', handleTouchStart);
-    scrollContainer.addEventListener('touchmove', handleTouchMove);
-  });
-</script>
-
 </body>
 
 </html>
